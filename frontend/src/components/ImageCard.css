@@ -1,0 +1,63 @@
+.image-card {
+  border: 1px solid #e0e0e0; /* Light gray for a softer look */
+  border-radius: 10px; /* Slightly larger border radius */
+  padding: 20px; /* Increased padding for better spacing */
+  margin: 20px; /* Increased margin for more spacing */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and scale */
+  background-color: #ffffff; /* Clean white background */
+}
+.image-gallery {
+  margin-top: 70px; /* Adjust this value based on your navbar height */
+}
+
+.image-card:hover {
+  transform: scale(1.05); /* Slightly larger scale */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.image-preview {
+  max-width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners for image preview */
+  border: 1px solid #e0e0e0; /* Border for image preview */
+}
+
+.image-preview svg {
+  width: 100%;
+  height: 100%;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Slightly increased gap between buttons */
+}
+
+.download-btn {
+  padding: 12px 20px; /* More padding for better touch target */
+  border: none;
+  background-color: #6c63ff; /* Main button color */
+  color: white;
+  border-radius: 6px; /* Slightly larger border radius */
+  cursor: pointer;
+  font-weight: bold; /* Bold text for better readability */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.download-btn:hover {
+  background-color: #5a54e0; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+#bgColorPicker {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Border for the color picker */
+  border-radius: 4px; /* Rounded corners for color picker */
+  padding: 4px; /* Padding for better aesthetics */
+  background-color: #f8f8f8; /* Light background for the picker */
+}

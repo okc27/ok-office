@@ -1,0 +1,16 @@
+.navbar {
+  position: sticky; /* Change this to fixed if you want it always on top */
+  top: 0; /* Sticks the navbar to the top of the viewport */
+  z-index: 1000; /* Ensures the navbar is above other content */
+  background-color: #add8e6; /* Background color of the navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a slight elevation effect */
+}
+
+.color-picker {
+  display: flex; /* Flexbox for aligning color pickers */
+  align-items: center; /* Center align items vertically */
+}
+
+.color-picker label {
+  margin-right: 8px; /* Space between label and color picker */
+}
