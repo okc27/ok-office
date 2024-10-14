@@ -39,15 +39,6 @@ nav ul li a {
   font-size: 1.2em;
 }
 
-main {
-  padding: 20px;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
 
 .image-card {
   background: white;
@@ -85,4 +76,11 @@ main {
 
 .download-buttons .download-btn:hover {
   background-color: #0056b3;
+}
+main {
+  padding: 80px 20px; /* Add top padding to account for the fixed navbar */
+}
+
+.image-grid {
+  margin-top: 20px; /* Optional: Add some space between the navbar and the images */
 }

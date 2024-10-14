@@ -1,16 +1,58 @@
 .navbar {
-  position: sticky; /* Change this to fixed if you want it always on top */
+  position: sticky !important;
   top: 0; /* Sticks the navbar to the top of the viewport */
   z-index: 1000; /* Ensures the navbar is above other content */
-  background-color: #add8e6; /* Background color of the navbar */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for a slight elevation effect */
+  background-color: transparent; /* Initial transparent background */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transform: scale(0.99);
 }
 
+.navbar.scrolled {
+  background-color: #fdfdfd; /* Change to pink when scrolled */
+  transform: scale(1); /* Slightly zoomed in on scroll */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex container for color pickers */
 .color-picker {
   display: flex; /* Flexbox for aligning color pickers */
   align-items: center; /* Center align items vertically */
 }
 
+/* Spacing for labels and pickers */
 .color-picker label {
   margin-right: 8px; /* Space between label and color picker */
+}
+
+/* Specific styles for color pickers */
+#svg-color-picker, #background-color-picker {
+  margin-right: 15px; /* Space between pickers */
+  border-color: white;
+}
+
+.navbar > .container-fluid {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar > .container-fluid {
+    flex-direction: column; /* Stack elements vertically */
+    margin: auto;  
+  }
+
+  .navbar-brand {
+    font-size: 18px; /* Reduce brand text size */
+    margin-bottom: 10px; /* Space below brand */
+  }
+
+  .color-picker label {
+    font-size: 12px; /* Reduce font size for labels */
+  }
+
+  #svg-color-picker, #background-color-picker {
+    width: 30px; /* Adjust color picker size */
+    height: 30px; /* Adjust color picker size */
+  }
 }

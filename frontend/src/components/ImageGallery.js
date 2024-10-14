@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import ImageCard from './ImageCard';
 
 const ImageGallery = ({ svgColor, bgColor }) => {
@@ -32,6 +33,7 @@ const ImageGallery = ({ svgColor, bgColor }) => {
     fetchImages();
   }, []);
 
+  // Filter images based on search input
   const filteredImages = images.filter(image => {
     const searchValue = searchInput.toLowerCase();
     const tags = image.tags ? image.tags.join(' ') : '';
@@ -54,7 +56,7 @@ const ImageGallery = ({ svgColor, bgColor }) => {
       />
       <div className="row">
         {filteredImages.map((image) => (
-          <div className="col-md-4" key={image.id}>
+          <div className="col-md-4 mb-4" key={image.id}> {/* Added margin for better spacing */}
             <ImageCard
               title={image.title.rendered}
               description={image.description}
@@ -67,6 +69,12 @@ const ImageGallery = ({ svgColor, bgColor }) => {
       </div>
     </div>
   );
+};
+
+// Prop types for better type checking
+ImageGallery.propTypes = {
+  svgColor: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
 };
 
 export default ImageGallery;

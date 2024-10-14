@@ -97,7 +97,7 @@ const ImageCard = ({ title, description, svgUrl, svgColor, backgroundColor }) =>
       const ctx = canvas.getContext('2d');
 
       // Apply the selected background color for JPEG
-      ctx.fillStyle = backgroundColor || '#ffffff';
+      ctx.fillStyle = backgroundColor || '#fdfdfd';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
       URL.revokeObjectURL(url);
