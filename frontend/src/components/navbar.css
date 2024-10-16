@@ -5,53 +5,129 @@
   background-color: transparent; /* Initial transparent background */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
   transform: scale(0.99);
+  padding: 0; /* Removed specific padding for uniformity */
 }
 
-.navbar.scrolled {
-  background-color: #fdfdfd; /* Change to pink when scrolled */
-  transform: scale(1); /* Slightly zoomed in on scroll */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.navbar-logo {
+  width: 150px;
+  height: 40px;
 }
 
-/* Flex container for color pickers */
+.navbar-brand {
+  margin-right: 0px !important;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space items evenly */
+  width: 100%; /* Ensures full width for navbar content */
+}
+
+.search-bar {
+  flex-grow: 1; /* Allows the search bar to take available space */
+  margin: 0px; /* Margin for spacing */
+  position: relative; /* Make it a relative positioning context */
+}
+
+/* Rounded corners for the search input */
+.search-bar input {
+  border-radius: 25px; /* Rounded corners */
+  border: 1px solid #ccc; /* Optional: add border */
+  padding: 8px 12px; /* Padding for better spacing */
+  width: 100%; /* Full width for the input */
+  padding-right: 40px; /* Space for the search icon */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.search-bar input:focus {
+  border-color: #6c63ff; /* Change this color as needed */
+  outline: none; /* Remove default outline */
+}
+
+/* Styles for the search icon */
+.search-icon {
+  position: absolute; /* Position the icon inside the search bar */
+  right: 12px; /* Distance from the right edge */
+  top: 45%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust vertical position */
+  pointer-events: none; /* Prevent clicks on the icon */
+}
+
+.drop-icon {
+  margin-left: 5px;
+}
+
 .color-picker {
   display: flex; /* Flexbox for aligning color pickers */
-  align-items: center; /* Center align items vertically */
+  align-items: center; 
 }
 
 /* Spacing for labels and pickers */
 .color-picker label {
-  margin-right: 8px; /* Space between label and color picker */
+  margin-right: 0px !important; /* Space between label and color picker */
 }
 
 /* Specific styles for color pickers */
-#svg-color-picker, #background-color-picker {
-  margin-right: 15px; /* Space between pickers */
-  border-color: white;
+input[type='color'] {
+  margin-right: 10px; /* Space between pickers */
+  width: 40px; /* Adjust size as necessary */
+  height: 40px; /* Adjust size as necessary */
+  border-radius: 5px; /* Rounded corners */
+  border: 2px solid #ffffff; /* Optional: to add a visible border */
+  overflow: hidden; /* Ensure no overflow */
 }
 
+/* Add corner radius to the color picker container */
+.color-picker {
+  border-radius: 25px; /* Rounded corners for the color picker container */
+  padding: 5px; /* Optional: add some padding */
+  background-color: white; /* Optional: background color for visibility */
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.97); /* Change to light color when scrolled */
+  transform: scale(1); /* Slightly zoomed in on scroll */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for container */
 .navbar > .container-fluid {
   margin-left: 5%;
   margin-right: 5%;
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 875px) {
   .navbar > .container-fluid {
     flex-direction: column; /* Stack elements vertically */
-    margin: auto;  
+    align-items: center; /* Center align items */
+    margin: 0; /* Remove margin for better fitting */
   }
 
   .navbar-brand {
     font-size: 18px; /* Reduce brand text size */
     margin-bottom: 10px; /* Space below brand */
   }
+  .r-div.d-flex.align-items-center {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%; /* Full width for search bar */
+  }
+
+  .color-picker {
+    justify-content: center; /* Center color pickers */
+    width: 100%; /* Full width for color pickers */
+  }
 
   .color-picker label {
     font-size: 12px; /* Reduce font size for labels */
   }
 
-  #svg-color-picker, #background-color-picker {
+  input[type='color'] {
     width: 30px; /* Adjust color picker size */
     height: 30px; /* Adjust color picker size */
   }

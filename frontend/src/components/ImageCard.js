@@ -135,13 +135,13 @@ const ImageCard = ({ title, description, svgUrl, svgColor, backgroundColor }) =>
 
       <div className="download-buttons mt-3 btn-group" role="group">
         <button className="btn btn-primary" onClick={downloadSvg} disabled={isLoading}>
-          Download SVG
+          SVG
         </button>
         <button className="btn btn-success" onClick={convertSvgToPng} disabled={isLoading || !svgContent}>
-          Download PNG
+          PNG
         </button>
         <button className="btn btn-warning" onClick={convertSvgToJpeg} disabled={isLoading}>
-          Download JPEG
+          JPEG
         </button>
       </div>
     </div>

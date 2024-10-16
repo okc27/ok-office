@@ -1,121 +1,201 @@
-.image-card {
-  border: 1px solid #e0e0e0; /* Light gray for a softer look */
-  border-radius: 10px; /* Slightly larger border radius */
-  padding: 15px; /* Reduced padding for better spacing */
-  margin: 15px; /* Reduced margin for more spacing */
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow and scale */
-  position: relative; /* Required for absolute positioning of buttons */
-  overflow: hidden; /* Ensure content stays within card boundaries */
+/* Image gallery container */
+.image-gallery.container {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 1200px;
 }
 
+/* Image card styling */
+.image-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+/* Title styling */
+.image-card h3 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 1.5em;
+  color: #6466ef;
+}
+
+/* Image preview styling */
+.image-preview {
+  max-width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  transition: transform 0.3s ease;
+}
+
+/* Card background */
 .image-card.card.p-3.text-center {
   background: #fdfdfd;
 }
 
-.image-gallery {
-  margin-top: 70px; /* Adjust this value based on your navbar height */
-}
-
-.image-preview {
-  max-width: 100%;
-  height: 220px; /* Reduced height for image previews */
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 8px; /* Rounded corners for image preview */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
+/* Hover effect */
 .image-card:hover .image-preview {
-  transform: scale(0.70) translateY(-70px); /* Scale down and move up on hover */
+  transform: scale(0.85) translateY(-20px);
 }
+
+/* SVG scaling */
 .image-preview svg {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease; /* Ensure the SVG scales with the image preview */
+  transition: transform 0.3s ease;
 }
 
-
-/* Initially hide the download buttons */
+/* Hide download buttons by default */
 .image-card .download-buttons {
-  display: none; /* Hide buttons by default */
+  display: none;
 }
 
+.download-buttons.mt-3.btn-group {
+  border-radius: 0px;
+}
+
+/* Button styling */
+button.btn.btn-primary, 
+button.btn.btn-success, 
+button.btn.btn-warning {
+  font-size: 10px;
+  padding: 3px;
+  border-radius: 0px;
+  background-color: transparent;
+  border: 0px;
+  color: white;            /* White text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button.btn.btn-primary:hover, 
+button.btn.btn-success:hover, 
+button.btn.btn-warning:hover {
+  background-color: white; /* White background on hover */
+  color: black;            /* Black text on hover */
+}
+
+
+/* Show buttons on hover */
 .image-card:hover .download-buttons {
-  display: flex; /* Show buttons on hover */
-  justify-content: center; /* Center buttons */
-  gap: 10px; /* Reduced gap between buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap in smaller screens */
-  position: absolute; /* Position buttons absolutely within the card */
-  bottom: 10px; /* Position buttons above the bottom edge */
-  transition: bottom 0.3s ease; 
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 10px;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* 50% transparent black */
-
-  padding: 5px 10px; /* Smooth transition for the buttons */
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 5px 10px;
+  transition: bottom 0.3s ease;
 }
 
-/* Download button styles */
+.download-buttons.mt-3.btn-group {
+  width: 100%;
+  bottom: 0px;
+}
+
+/* Button styling */
 .download-btn {
-  padding: 8px 12px; /* Reduced padding for a smaller button */
+  padding: 8px 12px;
   border: none;
-  border-radius: 6px; /* Slightly larger border radius */
-  background-color: #6c63ff; /* Main button color */
+  border-radius: 6px;
+  background-color: #6c63ff;
   color: white;
   cursor: pointer;
-  font-weight: bold; /* Bold text for better readability */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
-  font-size: 12px; /* Further reduced button text size */
-  flex: 1 1 auto; /* Allow buttons to grow and shrink */
-  max-width: 100px; /* Set a maximum width for buttons */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 12px;
+  flex: 1 1 auto;
+  max-width: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-button.btn.btn-primary,
-.btn-success {
-  border-radius: 0px;
-}
-
-button.btn.btn-warning {
-  border-radius: 0px;
-}
-
+/* Hover effect for buttons */
 .download-btn:hover {
-  background-color: #5a54e0; /* Darker shade on hover */
-  transform: translateY(-2px); /* Slightly lift button on hover */
+  background-color: #5a54e0;
+  transform: translateY(-2px);
 }
 
-/* Color Picker */
+/* Color picker styling */
 #bgColorPicker {
-  margin-top: 8px; /* Reduced margin for aesthetics */
-  margin-bottom: 16px; /* Reduced margin for aesthetics */
-  border: 1px solid #ccc; /* Border for the color picker */
-  border-radius: 4px; /* Rounded corners for color picker */
-  padding: 4px; /* Padding for better aesthetics */
-  background-color: #f8f8f8; /* Light background for the picker */
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #f8f8f8;
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .image-card {
-    padding: 12px; /* Further reduce padding */
-    margin: 10px auto; /* Center and reduce margin */
-    font-size: 12px; /* Further reduce text size */
-    width: 90%; /* Set width to 90% of screen */
+    padding: 12px;
+    margin: 10px auto;
+    font-size: 12px;
+    width: 90%;
   }
 
   .image-preview {
-    height: 180px; /* Reduce image preview height */
+    height: 150px;
   }
 
   .download-btn {
-    padding: 6px 10px; /* Further reduce button padding for smaller screens */
-    font-size: 10px; /* Further reduce button text size */
+    padding: 6px 10px;
+    font-size: 10px;
+    max-width: 80px; /* Reduced button size */
   }
 
   .download-buttons {
-    gap: 6px; /* Further reduce gap between buttons */
-    flex-direction: row; /* Ensure buttons stay in a row */
+    gap: 6px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    padding: 8px;
+    font-size: 10px;
+    margin: 8px auto;
+  }
+
+  .download-btn {
+    padding: 4px 8px;
+    font-size: 8px;
+    max-width: 60px; /* Further reduced button size */
+  }
+}
+
+/* Custom column class for 5 columns layout */
+.col-2-4 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .col-2-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-2-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
