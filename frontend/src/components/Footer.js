@@ -1,13 +1,12 @@
 import React from 'react';
 import './Footer.css'; // Ensure you have the CSS file linked
-import logo from '../assets/the2px-logo.svg'; // Corrected import path
 
 const Footer = () => {
   return (
     <footer className="footer d-flex justify-content-between align-items-center p-2">
       {/* Logo on the left side */}
       <div className="footer-logo">
-        <img src={logo} alt="Logo" height="40" />
+        <img src="http://localhost/headlesswp/the2px/wp-content/uploads/2024/10/the2px-logo.svg" alt="logo"  height="40" />
       </div>
       
 

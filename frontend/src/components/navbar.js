@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './navbar.css'; // Ensure to import your CSS file for custom styles
-import logo from '../assets/the2px-logo.svg'; // Corrected import path
-import searchIcon from '../assets/search-svgrepo-com.svg'; // Import the search icon
-import dropicon from '../assets/dropdown-svgrepo-com.svg'; // Import the search icon
 
 const Navbar = ({ svgColor, setSvgColor, bgColor, setBgColor, searchInput, setSearchInput }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +21,8 @@ const Navbar = ({ svgColor, setSvgColor, bgColor, setBgColor, searchInput, setSe
     <nav className={`navbar navbar-light ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container-fluid">
         <div className="navbar-brand" onClick={() => console.log("Brand clicked!")}>
-          <img src={logo} alt="the2px logo" className="navbar-logo" />
+          {/* Update the logo URL */}
+          <img src="http://localhost/headlesswp/the2px/wp-content/uploads/2024/10/the2px-logo.svg" alt="the2px logo" className="navbar-logo" />
         </div>
 
         <div className="r-div d-flex align-items-center">
@@ -37,7 +35,8 @@ const Navbar = ({ svgColor, setSvgColor, bgColor, setBgColor, searchInput, setSe
               onChange={(e) => setSearchInput(e.target.value)}
             />
             <span className="search-icon">
-              <img src={searchIcon} alt="Search Icon" width="20" height="20" />
+              {/* Update the search icon URL */}
+              <img src="http://localhost/headlesswp/the2px/wp-content/uploads/2024/10/search-svgrepo-com.svg" alt="Search Icon" width="20" height="20" />
             </span>
           </div>
           
@@ -46,8 +45,9 @@ const Navbar = ({ svgColor, setSvgColor, bgColor, setBgColor, searchInput, setSe
               <label htmlFor="svg-color-picker" className="me-2">SVG Color
               </label>
               <span className="drop-icon">
-                  <img src={dropicon} alt="Drop Icon" width="20" height="20" />
-                </span>
+                {/* Update the dropdown icon URL */}
+                <img src="http://localhost/headlesswp/the2px/wp-content/uploads/2024/10/dropdown-svgrepo-com.svg" alt="Drop Icon" width="20" height="20" />
+              </span>
               <input
                 type="color"
                 id="svg-color-picker"
@@ -59,7 +59,7 @@ const Navbar = ({ svgColor, setSvgColor, bgColor, setBgColor, searchInput, setSe
               <label htmlFor="background-color-picker" className="mx-2">Background Color
               </label>
               <span className="drop-icon">
-                  <img src={dropicon} alt="Drop Icon" width="20" height="20" />
+                <img src="http://localhost/headlesswp/the2px/wp-content/uploads/2024/10/dropdown-svgrepo-com.svg" alt="Drop Icon" width="20" height="20" />
               </span>
               <input
                 type="color"
