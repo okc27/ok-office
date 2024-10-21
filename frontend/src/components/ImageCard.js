@@ -15,7 +15,7 @@ const ImageCard = ({ title, description, svgUrl, svgColor, backgroundColor }) =>
         }
         let content = await response.text();
         // Change the color in the SVG content
-        content = content.replace(/#6c63ff/g, svgColor); // Change #6c63ff to the selected SVG color
+        content = content.replace(/#c1272d/g, svgColor); // Change #c1272d to the selected SVG color
         setSvgContent(content);
         setHasError(false);
       } catch (error) {
@@ -122,7 +122,6 @@ const ImageCard = ({ title, description, svgUrl, svgColor, backgroundColor }) =>
   return (
     <div className="image-card card p-3 text-center">
       <h3 className="card-title display-5">{title}</h3>
-      <p className="card-text">{description}</p>
 
       <div
         className="image-preview"

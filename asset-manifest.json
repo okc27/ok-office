@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9e4319b.css",
-    "main.js": "/static/js/main.6139e10d.js",
+    "main.css": "/static/css/main.b3e142d7.css",
+    "main.js": "/static/js/main.a6e43d47.js",
+    "static/media/the2px-logo.svg": "/static/media/the2px-logo.f68c4ccb9ad5f0c7747a73f30418089b.svg",
+    "static/media/search-svgrepo-com.svg": "/static/media/search-svgrepo-com.ed1a61801585197cbee721dc1c837237.svg",
     "index.html": "/index.html",
-    "main.a9e4319b.css.map": "/static/css/main.a9e4319b.css.map",
-    "main.6139e10d.js.map": "/static/js/main.6139e10d.js.map"
+    "static/media/dropdown-svgrepo-com.svg": "/static/media/dropdown-svgrepo-com.c57e5c87b3f163e57ceb6c0ac4f9ce92.svg",
+    "main.b3e142d7.css.map": "/static/css/main.b3e142d7.css.map",
+    "main.a6e43d47.js.map": "/static/js/main.a6e43d47.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9e4319b.css",
-    "static/js/main.6139e10d.js"
+    "static/css/main.b3e142d7.css",
+    "static/js/main.a6e43d47.js"
   ]
 }

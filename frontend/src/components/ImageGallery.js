@@ -59,7 +59,7 @@ const ImageGallery = ({ svgColor, bgColor, searchInput }) => {
     <div className="image-gallery container">
       <div className="row">
         {filteredImages.map((image) => (
-          <div className="col-2-4 mb-4" key={image.id}> {/* Custom column class for 5 cards in a row */}
+          <div className="col-4 mb-4" key={image.id}> {/* Custom column class for 3 cards in a row */}
             <ImageCard
               title={image.title.rendered}
               description={image.description}

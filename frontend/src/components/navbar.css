@@ -4,16 +4,18 @@
   z-index: 1000; /* Ensures the navbar is above other content */
   background-color: transparent; /* Initial transparent background */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  transform: scale(0.99);
-  padding: 0; /* Removed specific padding for uniformity */
+  transform: scale(0.98); /* Slightly reduce the size */
+  padding: 5px 0; /* Reduce padding for smaller height */
+  min-height: 50px; /* Define a minimum height */
 }
 
 .navbar-logo {
-  width: 150px;
-  height: 40px;
+  width: 120px; /* Reduce the size of the logo */
+  height: 30px; /* Reduce the height */
 }
 
 .navbar-brand {
+  font-size: 18px; /* Reduce the font size of the brand */
   margin-right: 0px !important;
 }
 
@@ -32,25 +34,25 @@
 
 /* Rounded corners for the search input */
 .search-bar input {
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 20px; /* Rounded corners */
   border: 1px solid #ccc; /* Optional: add border */
-  padding: 8px 12px; /* Padding for better spacing */
+  padding: 6px 10px; /* Adjust padding */
   width: 100%; /* Full width for the input */
-  padding-right: 40px; /* Space for the search icon */
+  padding-right: 35px; /* Space for the search icon */
   transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 /* Change border color on focus */
 .search-bar input:focus {
-  border-color: #6c63ff; /* Change this color as needed */
+  border-color: #c1272d; /* Change this color as needed */
   outline: none; /* Remove default outline */
 }
 
 /* Styles for the search icon */
 .search-icon {
   position: absolute; /* Position the icon inside the search bar */
-  right: 12px; /* Distance from the right edge */
-  top: 45%; /* Center vertically */
+  right: 10px; /* Adjusted distance from the right edge */
+  top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Adjust vertical position */
   pointer-events: none; /* Prevent clicks on the icon */
 }
@@ -67,13 +69,14 @@
 /* Spacing for labels and pickers */
 .color-picker label {
   margin-right: 0px !important; /* Space between label and color picker */
+  font-size: 12px; /* Reduce font size for labels */
 }
 
 /* Specific styles for color pickers */
 input[type='color'] {
-  margin-right: 10px; /* Space between pickers */
-  width: 40px; /* Adjust size as necessary */
-  height: 40px; /* Adjust size as necessary */
+  margin-right: 8px; /* Adjust space between pickers */
+  width: 30px; /* Reduce size of the color picker */
+  height: 30px; /* Reduce size of the color picker */
   border-radius: 5px; /* Rounded corners */
   border: 2px solid #ffffff; /* Optional: to add a visible border */
   overflow: hidden; /* Ensure no overflow */
@@ -81,8 +84,8 @@ input[type='color'] {
 
 /* Add corner radius to the color picker container */
 .color-picker {
-  border-radius: 25px; /* Rounded corners for the color picker container */
-  padding: 5px; /* Optional: add some padding */
+  border-radius: 20px; /* Rounded corners for the color picker container */
+  padding: 4px; /* Adjust padding */
   background-color: white; /* Optional: background color for visibility */
 }
 
@@ -107,9 +110,10 @@ input[type='color'] {
   }
 
   .navbar-brand {
-    font-size: 18px; /* Reduce brand text size */
-    margin-bottom: 10px; /* Space below brand */
+    font-size: 16px; /* Further reduce brand text size */
+    margin-bottom: 8px; /* Space below brand */
   }
+
   .r-div.d-flex.align-items-center {
     width: 100%;
   }
@@ -124,11 +128,11 @@ input[type='color'] {
   }
 
   .color-picker label {
-    font-size: 12px; /* Reduce font size for labels */
+    font-size: 10px; /* Further reduce font size for labels */
   }
 
   input[type='color'] {
-    width: 30px; /* Adjust color picker size */
-    height: 30px; /* Adjust color picker size */
+    width: 25px; /* Adjust color picker size */
+    height: 25px; /* Adjust color picker size */
   }
 }

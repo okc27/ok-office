@@ -7,13 +7,17 @@
   }
   
   .footer-logo img {
-    height: 40px; /* Adjust the logo size */
+    height: 30px; /* Adjust the logo size */
+    width: 120px;
     margin-left: 50px;
   }
   
   .footer-rights {
     font-size: 14px;
     margin-right: 50px;
-    color: #6c757d; /* Gray color for text */
+    color: #c1272d; /* Gray color for text */
   }
   
+  p {
+    margin-bottom: 0px;
+}

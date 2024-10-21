@@ -5,7 +5,7 @@ import Footer from './components/Footer'; // Import Footer
 import './App.css'; // Ensure CSS is included for global styles
 
 const App = () => {
-  const [svgColor, setSvgColor] = useState('#6c63ff'); // Default SVG color
+  const [svgColor, setSvgColor] = useState('#c1272d'); // Default SVG color
   const [bgColor, setBgColor] = useState('#fdfdfd'); // Default background color
   const [searchInput, setSearchInput] = useState(''); // State for search input
 
